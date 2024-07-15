@@ -1,7 +1,7 @@
-$small-screen: 430px;
-$medium-screen: 770px;
-$large-screen: 1024px;
-$extra-large-screen: 1440px;
+$small-screen: 426px;
+$medium-screen: 769px;
+$large-screen: 1025px;
+$extra-large-screen: 1441px;
 
 @mixin respond-to-extra-large {
   @media (max-width: $extra-large-screen) {
