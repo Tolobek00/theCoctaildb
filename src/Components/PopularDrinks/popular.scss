@@ -1,0 +1,18 @@
+@import "../../Styles/mixin";
+
+.coctails {
+    @include flexbox (center, center);
+    gap: 25px;
+    border-bottom: 3px solid white;
+    padding: 25px 0;
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 15px 15px 0 0;
+    }
+    h1 {
+        color:  white;
+        line-height: 20px;
+        text-align: center;
+    }
+}

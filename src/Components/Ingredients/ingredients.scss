@@ -1,0 +1,44 @@
+@import "../../Styles/mixin";
+
+.ingredients {
+  @include flexbox(space-around, center);
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 50px 0;
+  border-bottom: 3px solid  white;
+  @include respond-to-large {
+    width: 1024px;
+    flex-wrap: wrap;
+  }
+  @include respond-to-medium {
+    width: 768px;
+    flex-wrap: wrap;
+  }
+  @include respond-to-small {
+    width: 425px;
+    flex-direction: column;
+  }
+  .filter_container {
+    div {
+      @include flexbox(center, center);
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      cursor: pointer;
+      &:hover h2{
+        color: orange;
+      }
+      img {
+        width: 250px;
+        object-fit: cover;
+        height: 270px;
+      }
+      h2 {
+        color: white;
+        font-family: serif;
+        transition: .3s;
+
+      }
+    }
+  }
+}

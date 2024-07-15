@@ -1,0 +1,88 @@
+@import "../../Styles/mixin";
+
+footer {
+  background: #1d000d;
+  height: 134px;
+  // border: 1px solid white;
+  @include respond-to-large {
+    max-width: 1024px;
+  }
+  @include respond-to-medium {
+    max-width: 768px;
+  }
+  @include respond-to-small {
+    max-width: 425px;
+    height: 220px;
+  }
+  .footer {
+    @include flexbox(space-around, center);
+    // border: 1px solid white;
+    @include respond-to-large {
+      max-width: 1024px;
+      flex-wrap: wrap;
+    }
+    @include respond-to-medium {
+      max-width: 768px;
+      flex-wrap: wrap;
+    }
+    @include respond-to-small {
+      max-width: 425px;
+      flex-direction: column
+    //   flex-wrap: wrap;
+    }
+    div {
+      @include flexbox(center, center);
+    }
+    div:first-child {
+      width: 220px;
+      padding-top: 25px;
+      h1 {
+        color: white;
+        font-family: inherit;
+      }
+    }
+    div:nth-child(2) {
+      padding-top: 35px;
+      flex-direction: column;
+      gap: 15px;
+
+      section:first-child {
+        @include flexbox(center, center);
+        gap: 5px;
+        h1 {
+          color: white;
+          font-weight: 400;
+        }
+        .logo_appsF {
+          color: rgb(27, 63, 180);
+        }
+        .logo_appsT {
+          color: #337ab7;
+        }
+        .logo_appsD {
+          color: blueviolet;
+        }
+      }
+      section:nth-child(2) {
+        @include respond-to-small {
+            text-align: center;
+            max-width: 400px;
+            flex-wrap: wrap;
+        }
+      }
+    }
+    div:nth-child(3) {
+      @include flexbox(space-around, center);
+      gap: 15px;
+      h3 {
+        font-weight: 400;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      h3:hover {
+        color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../Styles/mixin";
+
+.category {
+  padding: 25px 0;
+  border-bottom: 3px solid white;
+  @include flexbox(space-between, center);
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @include respond-to-large {
+    flex-wrap: wrap;
+    width: 1024px;
+  }
+  @include respond-to-medium {
+    @include flexbox(space-between, center);
+    flex-wrap: wrap;
+    width: 768px;
+  }
+
+  @include respond-to-small {
+    @include flexbox(space-between, l center);
+    width: 425px;
+    flex-direction: column;
+  }
+  .category_map {
+    border-radius: 35px 35px 0 0;
+    transition: 0.3s;
+    padding: 15px 0;
+    width: 300px;
+    div {
+      height: 350px;
+      width: 300px;
+      @include flexbox(center, center);
+      flex-direction: column;
+      gap: 15px;
+      h1 {
+        color: white;
+        text-align: center;
+      }
+      img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        transition: 0.3s;
+      }
+    }
+    &:hover img {
+      transform: scale(1.02);
+    }
+    &:hover h1 {
+      color: orange;
+    }
+  }
+}

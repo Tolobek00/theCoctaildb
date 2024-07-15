@@ -1,0 +1,51 @@
+@import "../../Styles/mixin";
+
+.search {
+    @include flexbox (center, center);
+    flex-direction: column;
+    border-bottom: 3px solid white;
+    padding: 25px 0;
+    gap: 15px;
+    @include respond-to-large {
+        max-width: 1024px;
+    }
+    @include respond-to-medium {
+        max-width: 768px;
+    }
+    @include respond-to-small {
+        max-width: 425px;
+    }
+    .input_search {
+        input {
+            width: 185px;
+            height: 34px;
+            padding-left: 5px;
+            border-radius: 3px 0 0 3px;
+            border: 1px solid grey;
+        }
+        button {
+            border: 1px solid grey;
+            height: 34px;
+            width: 39px;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+    div:nth-child(2) {
+        padding: 0 15px;
+        @include flexbox (space-between, center);
+        gap: 20px;
+        @include respond-to-small {
+        flex-wrap: wrap;
+        }
+        section {
+            @include flexbox (space-between, center);
+            gap: 5px;
+            h1, h2 {
+                color: white;
+            }
+            h2 {
+                font-weight: 300;
+            }
+        }
+    }
+}
