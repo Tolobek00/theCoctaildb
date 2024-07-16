@@ -1,13 +1,16 @@
 @import "./Styles/mixin";
 
 .Wrapper {
-    @include respond-to-large {
-        max-width: 1026px;
-    }
-    @include respond-to-medium {
-        max-width: 769px;
-    }
-    @include respond-to-small {
-        max-width: 426px;
-    }
+  @include respond-to-large {
+    max-width: 1026px;
+    margin: 0 auto;
+  }
+  @include respond-to-medium {
+    max-width: 769px;
+    margin: 0 auto;
+  }
+  @include respond-to-small {
+    max-width: 426px;
+    margin: 0 auto;
+  }
 }
