@@ -7,9 +7,20 @@
     padding: 25px 0;
     width: 1280px;
     margin: 0 auto;
+    @include respond-to-large {
+        max-width: 1024px;
+    }
+    @include respond-to-medium {
+        max-width: 768px;
+    }
+    @include respond-to-small {
+        max-width: 425px;
+        flex-direction: column;
+    }
     img {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
         border-radius: 15px 15px 0 0;
     }
     h1 {
