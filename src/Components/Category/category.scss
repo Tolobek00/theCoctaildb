@@ -3,22 +3,24 @@
 .category {
   padding: 25px 0;
   border-bottom: 3px solid white;
-  @include flexbox(space-between, center);
+  @include flexbox(space-around, center);
   flex-wrap: wrap;
   gap: 15px;
+  width: 1280px;
+  margin: 0 auto;
 
   @include respond-to-large {
     flex-wrap: wrap;
     width: 1024px;
   }
   @include respond-to-medium {
-    @include flexbox(space-between, center);
+    @include flexbox(space-around, center);
     flex-wrap: wrap;
     width: 768px;
   }
 
   @include respond-to-small {
-    @include flexbox(space-between, l center);
+    @include flexbox(space-around, l center);
     width: 425px;
     flex-direction: column;
   }

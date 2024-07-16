@@ -12,7 +12,7 @@ function Header() {
   return (
     <header>
       <div className="header container">
-        <div className="logo">
+        <div className="logo" onClick={() => navigate ("/")}>
           <img src={logo} alt="" />
         </div>
         <div className="burger_menu">
