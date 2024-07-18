@@ -3,6 +3,7 @@ import Layout from "./Components/Layout/Layout";
 import HomePages from "./Pages/HomePages";
 import Popular from "./Components/PopularDrinks/Popular";
 import Category from "./Components/Category/Category";
+import Gin from "./Components/GinIngredient/Gin";
 import "./App.css";
 import "./App.scss";
 
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<HomePages />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/category" element={<Category />} />
+          <Route path="/ingredientGin" element={<Gin />} />
         </Route>
       </Routes>
     </div>

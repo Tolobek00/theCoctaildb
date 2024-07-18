@@ -3,8 +3,11 @@
 header {
   height: 90px;
   background: #1d000d;
-  width: 1280px;
+  // width: 1280px;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 55;
   @include respond-to-large {
     max-width: 1025px;
     margin: 0 auto;
@@ -17,62 +20,75 @@ header {
     max-width: 425px;
     margin: 0 auto;
   }
-  .header {
-    height: 90px;
-    @include flexbox(space-between, center);
+  .header_container {
+    width: 1280px;
+    margin: 0 auto;
     @include respond-to-large {
       max-width: 1024px;
-      padding: 0 20px;
     }
     @include respond-to-medium {
       max-width: 768px;
     }
     @include respond-to-small {
-      max-width: 425px
+      max-width: 425px;
     }
-
-    .burger_menu {
-      display: none;
-      .burger_btn  {
-        color: white;
-        font-size: 30px;
-      }
-      @include respond-to-medium {
-        display: block
-      }
-    }
-
-    .nav_header {
+    .header {
+      height: 90px;
       @include flexbox(space-between, center);
-      width: 290px;
-      // gap: 20px;
+      @include respond-to-large {
+        max-width: 1024px;
+        padding: 0 20px;
+      }
       @include respond-to-medium {
+        max-width: 768px;
+      }
+      @include respond-to-small {
+        max-width: 425px;
+      }
+
+      .burger_menu {
         display: none;
-      }
-      button:first-child {
-        width: 63px;
-        height: 34px;
-        background-color: #c52d2f;
-        color: white;
-        border-radius: 5px;
-      }
-      button:nth-child(2) {
-        width: 45px;
-        height: 34px;
-        border: none;
-        background: none;
-        color: white;
-        border-radius: 5px;
-        transition: 0.3s;
-        &:hover {
-          background: #c52d2f;
+        .burger_btn {
+          color: white;
+          font-size: 30px;
+        }
+        @include respond-to-medium {
+          display: block;
         }
       }
-      input {
-        width: 120px;
-        height: 35px;
-        padding-left: 5px;
-        border-radius: 5px;
+
+      .nav_header {
+        @include flexbox(space-between, center);
+        width: 290px;
+        // gap: 20px;
+        @include respond-to-medium {
+          display: none;
+        }
+        button:first-child {
+          width: 63px;
+          height: 34px;
+          background-color: #c52d2f;
+          color: white;
+          border-radius: 5px;
+        }
+        button:nth-child(2) {
+          width: 45px;
+          height: 34px;
+          border: none;
+          background: none;
+          color: white;
+          border-radius: 5px;
+          transition: 0.3s;
+          &:hover {
+            background: #c52d2f;
+          }
+        }
+        input {
+          width: 120px;
+          height: 35px;
+          padding-left: 5px;
+          border-radius: 5px;
+        }
       }
     }
   }

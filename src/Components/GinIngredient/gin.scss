@@ -1,0 +1,21 @@
+@import "../../Styles/mixin";
+
+.container_gin {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 1280px;
+    margin: 0 auto;
+    gap: 25px;
+    div{
+        width: 100px;
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        h1 {
+            width: 100%;
+            color:  white;
+            font-weight: 200;
+        }
+    }
+}
